@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Steganography Project Overview</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section class="project-selection">
+        <h2>Select a Project</h2>
+        <div class="button-container">
+            <!-- Button for COVID-19 Detection -->
+            <a href="index2.html" class="project-btn">COVID-19 Detection</a>
+
+            <!-- Button for Diabetic Retinopathy Detection -->
+            <a href="index2.html" class="project-btn">Diabetic Retinopathy Detection</a>
+
+            <!-- Button for Image Steganography -->
+            <a href="index3.html" class="project-btn">Image Steganography</a>
+            <a href="index4.html" class="project-btn">nameplate detection</a>
+
+        </div>
+    </section>
+    
+    <div class="container">
+        <header>
+            <h1>Image Steganography Using LSB Substitution</h1>
+            <p>Hide and retrieve secret messages within images using Python and OpenCV.</p>
+        </header>
+
+        <section class="overview">
+            <h2>Project Overview</h2>
+            <p><strong>Goal:</strong> To implement an image steganography technique using Least Significant Bit (LSB) substitution. This method embeds secret information into the least significant bits of pixel values, making it nearly undetectable to the naked eye.</p>
+        </section>
+
+        <section class="objectives">
+            <h2>Objectives</h2>
+            <ul>
+                <li>Select a cover image where secret data will be hidden.</li>
+                <li>Implement LSB substitution for embedding secret messages within images.</li>
+                <li>Extract hidden data from stego-images using reverse LSB substitution.</li>
+                <li>Ensure minimal distortion and secure hiding of messages.</li>
+            </ul>
+        </section>
+
+        <section class="data-preprocessing">
+            <h2>Data Acquisition and Preprocessing</h2>
+            <h3>Cover Image</h3>
+            <p>Choose a high-quality image that can hide data effectively. Ensure that the resolution is sufficient to store the desired message length.</p>
+
+            <h3>Preprocessing</h3>
+            <ul>
+                <li><strong>Image format:</strong> Use lossless image formats like PNG or BMP for reliable data embedding.</li>
+                <li><strong>Image resizing:</strong> Resize images for uniformity and ease of processing.</li>
+            </ul>
+        </section>
+
+        <section class="model-development">
+            <h2>LSB Substitution Algorithm</h2>
+            <h3>Embedding Process</h3>
+            <ul>
+                <li>Convert the secret message into a binary format.</li>
+                <li>Modify the least significant bit of each pixel in the cover image to store the message.</li>
+                <li>Ensure that the modified image (stego-image) looks visually similar to the original.</li>
+            </ul>
+
+            <h3>Extraction Process</h3>
+            <ul>
+                <li>Read the least significant bits of the stego-image.</li>
+                <li>Reconstruct the binary message and convert it back to its original form.</li>
+            </ul>
+        </section>
+
+        <section class="evaluation">
+            <h2>Evaluation</h2>
+            <h3>Quality Metrics</h3>
+            <ul>
+                <li><strong>PSNR (Peak Signal-to-Noise Ratio):</strong> Measure the similarity between the cover image and the stego-image.</li>
+                <li><strong>MSE (Mean Squared Error):</strong> Calculate the average squared difference between the pixel values of the original and stego-images.</li>
+            </ul>
+
+            <h3>Performance Testing</h3>
+            <p>Test the model with varying message lengths and image sizes to ensure data integrity and minimal visual distortion.</p>
+        </section>
+
+        <section class="deployment">
+            <h2>Deployment</h2>
+            <h3>Web Application</h3>
+            <p>Develop a web interface using Python (Flask/Streamlit) to allow users to upload images and hide/retrieve messages.</p>
+            <ul>
+                <li>Allow users to upload cover images for embedding messages.</li>
+                <li>Provide an interface for users to extract hidden messages from stego-images.</li>
+            </ul>
+
+            <h3>Cloud Deployment</h3>
+            <p>Deploy the application on a cloud platform (e.g., Streamlit Cloud, Heroku) for easy access.</p>
+        </section>
+
+        <footer>
+            <p>© 2024 Image Steganography Project</p>
+        </footer>
+    </div>
+</body>
+</html>
