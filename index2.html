@@ -3,50 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COVID-19 Detection Project Overview</title>
+    <title>Diabetic Retinopathy Detection Project Overview</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <section class="project-selection">
         <h2>Select a Project</h2>
         <div class="button-container">
-            <!-- Button for COVID-19 Detection -->
             <a href="index2.html" class="project-btn">COVID-19 Detection</a>
 
-            <!-- Button for Diabetic Retinopathy Detection -->
-            <a href="index2.html" class="project-btn">Diabetic Retinopathy Detection</a>
+            <a href="index5.html" class="project-btn">Diabetic Retinopathy Detection</a>
 
-            <!-- Button for Image Steganography -->
             <a href="index3.html" class="project-btn">Image Steganography</a>
             <a href="index4.html" class="project-btn">nameplate detection</a>
-
         </div>
     </section>
     <div class="container">
         <header>
-            <h1>COVID-19 Detection Using Deep Learning</h1>
-            <p>Detecting COVID-19 from X-ray images using Python and Streamlit Cloud</p>
+            <h1>Diabetic Retinopathy Detection Using Deep Learning</h1>
+            <p>Detecting Diabetic Retinopathy from retinal images using Python and TensorFlow</p>
         </header>
 
         <section class="overview">
             <h2>Project Overview</h2>
-            <p><strong>Goal:</strong> To develop a deep learning model for accurately detecting COVID-19 in chest X-ray images, deployed using Streamlit Cloud.</p>
+            <p><strong>Goal:</strong> To develop a deep learning model for accurately detecting Diabetic Retinopathy in retinal images, deployed using TensorFlow.</p>
         </section>
 
         <section class="objectives">
             <h2>Objectives</h2>
             <ul>
-                <li>Collect and preprocess a dataset of chest X-ray images.</li>
+                <li>Collect and preprocess a dataset of retinal images.</li>
                 <li>Develop and train a deep learning model using convolutional neural networks (CNNs).</li>
                 <li>Evaluate the model with metrics like accuracy, precision, recall, and F1-score.</li>
-                <li>Deploy the model on Streamlit Cloud for real-time image classification.</li>
+                <li>Deploy the model for real-time image classification.</li>
             </ul>
         </section>
 
         <section class="data-preprocessing">
             <h2>Data Acquisition and Preprocessing</h2>
             <h3>Dataset</h3>
-            <p>Utilize publicly available datasets, such as Kaggle's COVID-19 Radiography Database, which contains labeled chest X-ray images. Ensure the dataset includes both COVID-positive and healthy samples.</p>
+            <p>Utilize publicly available datasets, such as the Kaggle Diabetic Retinopathy Detection dataset, which contains labeled retinal images.</p>
 
             <h3>Preprocessing</h3>
             <ul>
@@ -63,13 +59,13 @@
             <ul>
                 <li><strong>ResNet (Residual Networks):</strong> Known for solving the vanishing gradient problem, making it suitable for deeper networks.</li>
                 <li><strong>VGG (Visual Geometry Group Network):</strong> Simple architecture with a strong performance on image classification.</li>
-                <li><strong>Custom CNN:</strong> A lightweight CNN model for faster training and inference on limited datasets or hardware.</li>
+                <li><strong>Inception:</strong> Efficient architecture with a large receptive field and minimal computational cost.</li>
             </ul>
 
             <h3>Training</h3>
             <ul>
                 <li>Split the dataset into training, validation, and test sets (e.g., 70/20/10 split).</li>
-                <li>Use <strong>cross-entropy loss</strong> for binary classification and optimize with the <strong>Adam optimizer</strong>.</li>
+                <li>Use <strong>cross-entropy loss</strong> for multi-class classification and optimize with the <strong>Adam optimizer</strong>.</li>
                 <li>Monitor the validation loss and accuracy to prevent overfitting.</li>
             </ul>
 
@@ -94,24 +90,19 @@
 
         <section class="deployment">
             <h2>Deployment</h2>
-            <h3>Web Application using Streamlit</h3>
-            <p>Deploy the model using Streamlit, a Python-based framework for creating interactive web applications.</p>
+            <h3>Web Application using Flask</h3>
+            <p>Deploy the model using Flask, a Python-based web framework.</p>
             <ul>
-                <li>Set up a Streamlit app with a user interface for uploading X-ray images.</li>
-                <li>Integrate the trained model to provide real-time COVID-19 predictions.</li>
+                <li>Set up a Flask app with a user interface for uploading retinal images.</li>
+                <li>Integrate the trained model to provide real-time Diabetic Retinopathy predictions.</li>
             </ul>
 
             <h3>Cloud Deployment</h3>
-            <p>Deploy the Streamlit app to the Streamlit Cloud for easy access and scalability. Steps include:</p>
-            <ul>
-                <li>Create a GitHub repository with the Streamlit app and trained model.</li>
-                <li>Connect the GitHub repo to Streamlit Cloud for seamless deployment.</li>
-                <li>Share the app URL for users to access the COVID detection tool online.</li>
-            </ul>
+            <p>Deploy the Flask app to a cloud platform like Heroku or AWS for easy access and scalability.</p>
         </section>
 
         <footer>
-            <p>© 2024 COVID-19 Detection Project</p>
+            <p>© naman singh</p>
         </footer>
     </div>
 </body>
